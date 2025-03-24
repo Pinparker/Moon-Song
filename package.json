@@ -1,0 +1,20 @@
+{
+  "name": "moon-song",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/three": "^0.174.0",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.9"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.10",
+    "three": "^0.174.0"
+  }
+}
