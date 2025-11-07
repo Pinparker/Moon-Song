@@ -2,7 +2,7 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/moon-song/",
+  base: "/Moon-Song/",
   resolve: {
     alias: [
       { find: "@", replacement: resolve(__dirname, "src") },
