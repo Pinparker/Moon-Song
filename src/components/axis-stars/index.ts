@@ -58,7 +58,7 @@ export function createAxisStars() {
     folder.addColor(config, 'color').onChange((value) => {
         material.color.set(value);
     });
-    folder.open();
+    folder.close();
 
     // 更新顶点位置的函数
     function updateVertices() {

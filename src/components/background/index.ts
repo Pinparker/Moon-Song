@@ -2,7 +2,7 @@ import { PlaneGeometry, TextureLoader, Mesh, MeshBasicMaterial } from "three";
 import { scene, camera, THREE } from "../../common/main";
 import { gui } from "../../common/gui";
 
-export function createBackground(config = {
+export function createBackground(name:string = '背景设置', config = {
     brightness: 0.27,
     opacity: 0.3,
     positionX: 0.55,
@@ -39,7 +39,7 @@ export function createBackground(config = {
     plane.rotation.set(config.rotationX, config.rotationY, config.rotationZ);
     material.color.setRGB(config.brightness, config.brightness, config.brightness);
     // 添加GUI控制
-    const folder = gui.addFolder('背景设置');
+    const folder = gui.addFolder(name);
     folder.add(config, 'brightness', 0, 2).name('亮度').onChange(() => {
         material.color.setRGB(config.brightness, config.brightness, config.brightness);
     });
@@ -67,7 +67,7 @@ export function createBackground(config = {
     folder.add(config, 'rotationZ', -Math.PI, Math.PI).name('Z轴旋转').onChange(() => {
         plane.rotation.z = config.rotationZ;
     });
-    folder.open();
+    folder.close();
     
     // 将平面放置在场景最后方
     plane.position.z = config.positionZ;

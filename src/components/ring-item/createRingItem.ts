@@ -33,6 +33,8 @@ export function createRingItem(
     mesh.position.x = defaultValue.xPosition;
     mesh.position.y = defaultValue.yPosition;
     mesh.position.z = 0.2; // 稍微调整z轴避免与星星重叠
+
+    // 创建 GUI 控制
     const folder = gui.addFolder('ringitem' + index++);
     folder.close(); // 默认收起面板
     const controls = {

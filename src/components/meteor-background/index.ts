@@ -69,7 +69,7 @@ export function createMeteorBackground() {
         .onChange(() => {
             plane.scale.set(config.scale, config.scale, 1);
         });
-    folder.open();
+    folder.close();
 
     // 添加到场景
     scene.add(plane);

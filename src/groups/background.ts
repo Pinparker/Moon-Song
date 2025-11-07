@@ -2,10 +2,11 @@ import { scene, THREE } from "../common/main";
 import { createBackground } from "../components/background";
 import { createStarRing } from "../components/star-ring";
 import { createMeteorBackground } from "../components/meteor-background";
+import imagePathBgMain from '@assets/background/bg2.png'
+import imagePath from '@assets/background/1x1_广袤的深空背景_中间是较大区域的暗色无法窥视_四周渐现淡紫色梦幻.png'
 
 createMeteorBackground();
-import imagePathBgMain from '@assets/background/bg2.png'
-const bgMain = createBackground({
+const bgMain = createBackground("bgMain",{
     brightness: 1.54,
     opacity: .32,
     positionX: 0.55,
@@ -17,8 +18,7 @@ const bgMain = createBackground({
     rotationZ: 0,
     texture: imagePathBgMain
 })
-import imagePath from '@assets/background/1x1_广袤的深空背景_中间是较大区域的暗色无法窥视_四周渐现淡紫色梦幻.png'
-const bg2 = createBackground({
+const bg2 = createBackground("bg2",{
     brightness: 2.,
     opacity: 1.,
     positionX: -0.22,
@@ -30,7 +30,7 @@ const bg2 = createBackground({
     rotationZ: 0,
     texture: imagePath
 });
-const bg3 = createBackground({
+const bg3 = createBackground("bg3",{
     brightness: 1.8,
     opacity: 0.6,
     positionX: -0.22,
@@ -42,13 +42,14 @@ const bg3 = createBackground({
     rotationZ: 0,
     texture: imagePath
 });
-const starBackground = createStarRing({
+const starBackground = createStarRing("starBackground",{
     starCounts: 360,
     innerRadius:0.9,
     outerRadius:3.0,
     color: new THREE.Color(0xffffff),
 });
-scene.add(starBackground)
+
 scene.add(bgMain)
 scene.add(bg2)
 scene.add(bg3)
+scene.add(starBackground)

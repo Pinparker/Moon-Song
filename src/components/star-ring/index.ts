@@ -3,8 +3,8 @@ import { scene, THREE } from "../../common/main";
 import { IStarRingGeometryConfig, StarRingGeometry } from "./StarRingGeometry";
 import { createStarMateril } from "./StarRingMaterial";
 
-export function createStarRing(config: IStarRingGeometryConfig = {}) {
-    const folder = gui.addFolder("star-ring");
+export function createStarRing(name: string = "star-ring",config: IStarRingGeometryConfig = {}) {
+    const folder = gui.addFolder(name);
     folder.close();
     const starRingGeometry = new StarRingGeometry(folder, config);
     const material = createStarMateril(folder, config);
