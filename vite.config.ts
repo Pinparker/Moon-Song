@@ -3,6 +3,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/Moon-Song/",
+  build: {
+    outDir: 'docs', // 打包输出目录(对应page部署文件)
+    emptyOutDir: true, // 每次打包前清空 docs 目录
+  },
   resolve: {
     alias: [
       { find: "@", replacement: resolve(__dirname, "src") },
