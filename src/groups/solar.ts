@@ -55,31 +55,31 @@ const startRing4 = createStarRing("star-ring4",{
     opacity: 0.6,
 });
 
-const circle1 = createCircle(CirclePathA, "circle1", {
+const circle1 = createCircle(CirclePathA, "星环1", {
     circleSize: 2.4,
     rotationSpeed: 0.05,
     opacity: 1.0,
 });
 
-const circle2 = createCircle(CirclePathG, "circle2", {
+const circle2 = createCircle(CirclePathG, "星环2", {
     circleSize: 3.9,
     rotationSpeed: 0.1,
     opacity: 1.0,
 });
 
-const circle3 = createCircle(CirclePathC, "circle3", {
+const circle3 = createCircle(CirclePathC, "星环3", {
     circleSize: 4.5,
     rotationSpeed: -0.08,
     opacity: 1.0,
 });
 
-const circle4 = createCircle(CirclePathB, "circle4", {
+const circle4 = createCircle(CirclePathB, "星环4", {
     circleSize: 4.5,
     rotationSpeed: -0.08,
     opacity: 1.0,
 });
 
-const circle5 = createCircle(CirclePathD, "circle5", {
+const circle5 = createCircle(CirclePathD, "星环5", {
     circleSize: 5.5,
     rotationSpeed: -0.07,
     opacity: 0.8,

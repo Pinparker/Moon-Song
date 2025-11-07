@@ -10,7 +10,7 @@ const basePosition = {
 };
 camera.position.set(basePosition.x, basePosition.y, basePosition.z);
 camera.lookAt(0, 0, 0);
-export const cameraGui = gui.addFolder("camera");
+export const cameraGui = gui.addFolder("相机");
 cameraGui.close(); // 默认收起面板
 
 // 位置控制

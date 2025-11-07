@@ -3,10 +3,11 @@ import { createBackground } from "../components/background";
 import { createStarRing } from "../components/star-ring";
 import { createMeteorBackground } from "../components/meteor-background";
 import imagePathBgMain from '@assets/background/bg2.png'
-import imagePath from '@assets/background/1x1_广袤的深空背景_中间是较大区域的暗色无法窥视_四周渐现淡紫色梦幻.png'
+import imagePath from '@assets/background/bg1.png'
 
-createMeteorBackground();
-const bgMain = createBackground("bgMain",{
+createMeteorBackground(); // 流星设置
+
+const bgMain = createBackground("画布背景",{
     brightness: 1.54,
     opacity: .32,
     positionX: 0.55,
@@ -18,7 +19,7 @@ const bgMain = createBackground("bgMain",{
     rotationZ: 0,
     texture: imagePathBgMain
 })
-const bg2 = createBackground("bg2",{
+const bg2 = createBackground("外星环背景",{
     brightness: 2.,
     opacity: 1.,
     positionX: -0.22,
@@ -30,7 +31,7 @@ const bg2 = createBackground("bg2",{
     rotationZ: 0,
     texture: imagePath
 });
-const bg3 = createBackground("bg3",{
+const bg3 = createBackground("内星环背景",{
     brightness: 1.8,
     opacity: 0.6,
     positionX: -0.22,
@@ -42,7 +43,7 @@ const bg3 = createBackground("bg3",{
     rotationZ: 0,
     texture: imagePath
 });
-const starBackground = createStarRing("starBackground",{
+const starBackground = createStarRing("星星背景",{
     starCounts: 360,
     innerRadius:0.9,
     outerRadius:3.0,
